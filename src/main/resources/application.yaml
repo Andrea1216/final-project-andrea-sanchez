@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: final-project
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: update          # crea/actualiza las tablas automáticamente
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  h2:
+    console:
+      enabled: true             # habilita la consola web de H2
+      path: /h2-console         # URL: http://localhost:8080/h2-console
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+
